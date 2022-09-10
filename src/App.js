@@ -22,8 +22,16 @@ const App = () => {
         numPassedTests,
         numFailedTests
       }, index) => (
-        <>
-        </>
+        <div key={index}>
+          <h2>{name || ''}</h2>
+          <div>
+            <img src={avatar_url || ''} alt={name || ''} style={{height: "150px"}}/>
+          </div>
+          <a href={html_url} target="_blank" rel="noreferrer">{user || ''}</a>
+          <p>Total: {numTotalTests || ''}</p>
+          <p>Passed: {numPassedTests || ''}</p>
+          <p>Failed: {numFailedTests || ''}</p>
+        </div>
       ))}
     </>
   );
