@@ -5,7 +5,7 @@ const App = () => {
   const [developers, setDevelopers] = useState([]);
 
   useEffect(() => {
-    fetch('https://api-test-poc-1.herokuapp.com/devs')
+    fetch('https://api-test-poc-production.up.railway.app/devs')
     .then(response => response.json())
     .then(data => setDevelopers(data));
   }, []);
